@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/red"
+    android:gravity="center_horizontal"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/lvc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/love_colculator"
+        android:textSize="34sp"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+    <EditText
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lvc"
+        android:id="@+id/firstName"
+        android:hint="@string/first_name"
+        style="@style/tv_Name"
+        android:layout_marginTop="100dp"
+        android:inputType="text"/>
+
+    <TextView
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/result"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:text="@string/_0"
+        android:textSize="80sp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"/>
+
+    <ImageView
+        android:src="@drawable/sertse"
+        android:id="@+id/imageView"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintBottom_toBottomOf="@id/result"
+        app:layout_constraintEnd_toEndOf="@id/result"
+        app:layout_constraintStart_toStartOf="@id/result"
+        app:layout_constraintTop_toTopOf="@id/result" />
+
+    <EditText
+        android:id="@+id/secondName"
+        style="@style/tv_Name"
+        android:hint="@string/second_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <com.google.android.material.button.MaterialButton
+        app:layout_constraintTop_toBottomOf="@id/secondName"
+        android:id="@+id/btn_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        app:cornerRadius="20dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/result"
+        android:textSize="30sp"
+        android:backgroundTint="@color/black"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
